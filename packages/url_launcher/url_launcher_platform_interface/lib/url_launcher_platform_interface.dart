@@ -57,6 +57,7 @@ abstract class UrlLauncherPlatform extends PlatformInterface {
     required bool enableJavaScript,
     required bool enableDomStorage,
     required bool universalLinksOnly,
+    required bool newTask,
     required Map<String, String> headers,
     String? webOnlyWindowName,
   }) {

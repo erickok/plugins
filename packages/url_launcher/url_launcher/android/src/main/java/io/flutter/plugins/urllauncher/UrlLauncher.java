@@ -49,6 +49,7 @@ class UrlLauncher {
    * Attempts to launch the given {@code url}.
    *
    * @param headersBundle forwarded to the intent as {@code Browser.EXTRA_HEADERS}.
+   * @param newTask when true, the URL is launched in a new task using {@code Intent.FLAG_ACTIVITY_NEW_TASK}.
    * @param useWebView when true, the URL is launched inside of {@link WebViewActivity}.
    * @param enableJavaScript Only used if {@param useWebView} is true. Enables JS in the WebView.
    * @param enableDomStorage Only used if {@param useWebView} is true. Enables DOM storage in the
@@ -59,6 +60,7 @@ class UrlLauncher {
   LaunchStatus launch(
       String url,
       Bundle headersBundle,
+      boolean newTask,
       boolean useWebView,
       boolean enableJavaScript,
       boolean enableDomStorage) {
@@ -76,6 +78,9 @@ class UrlLauncher {
           new Intent(Intent.ACTION_VIEW)
               .setData(Uri.parse(url))
               .putExtra(Browser.EXTRA_HEADERS, headersBundle);
+      if (newTask) {
+        launchIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+      }
     }
 
     try {

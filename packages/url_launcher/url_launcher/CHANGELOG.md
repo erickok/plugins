@@ -1,3 +1,7 @@
+## 6.0.3
+
+* Adds `newTask` on Android to launch urls into a new task context.
+
 ## 6.0.2
 
 * Update platform_plugin_interface version requirement.

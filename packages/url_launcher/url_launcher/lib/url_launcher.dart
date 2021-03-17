@@ -54,6 +54,9 @@ import 'package:url_launcher_platform_interface/url_launcher_platform_interface.
 /// Note that if any of the above are set to true but the URL is not a web URL,
 /// this will throw a [PlatformException].
 ///
+/// [newTask\ is an Android only setting and is ignored if a webview is used.
+/// It adds a NEW_TASK flag, causing the URL to launch in a new task.
+///
 /// [statusBarBrightness] Sets the status bar brightness of the application
 /// after opening a link on iOS. Does nothing if no value is passed. This does
 /// not handle resetting the previous status bar style.
@@ -67,6 +70,7 @@ Future<bool> launch(
   bool enableJavaScript = false,
   bool enableDomStorage = false,
   bool universalLinksOnly = false,
+  bool newTask = false,
   Map<String, String> headers = const <String, String>{},
   Brightness? statusBarBrightness,
   String? webOnlyWindowName,
@@ -100,6 +104,7 @@ Future<bool> launch(
     enableJavaScript: enableJavaScript,
     enableDomStorage: enableDomStorage,
     universalLinksOnly: universalLinksOnly,
+    newTask: newTask,
     headers: headers,
     webOnlyWindowName: webOnlyWindowName,
   );

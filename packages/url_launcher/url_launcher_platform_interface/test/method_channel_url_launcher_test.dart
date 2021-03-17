@@ -80,6 +80,7 @@ void main() {
         enableJavaScript: false,
         enableDomStorage: false,
         universalLinksOnly: false,
+        newTask: false,
         headers: const <String, String>{},
       );
       expect(
@@ -92,6 +93,7 @@ void main() {
             'enableJavaScript': false,
             'enableDomStorage': false,
             'universalLinksOnly': false,
+            'newTask': false,
             'headers': <String, String>{},
           })
         ],
@@ -106,6 +108,7 @@ void main() {
         enableJavaScript: false,
         enableDomStorage: false,
         universalLinksOnly: false,
+        newTask: false,
         headers: const <String, String>{'key': 'value'},
       );
       expect(
@@ -118,6 +121,7 @@ void main() {
             'enableJavaScript': false,
             'enableDomStorage': false,
             'universalLinksOnly': false,
+            'newTask': false,
             'headers': <String, String>{'key': 'value'},
           })
         ],
@@ -132,6 +136,7 @@ void main() {
         enableJavaScript: false,
         enableDomStorage: false,
         universalLinksOnly: false,
+        newTask: false,
         headers: const <String, String>{},
       );
       expect(
@@ -144,6 +149,7 @@ void main() {
             'enableJavaScript': false,
             'enableDomStorage': false,
             'universalLinksOnly': false,
+            'newTask': false,
             'headers': <String, String>{},
           })
         ],
@@ -158,6 +164,7 @@ void main() {
         enableJavaScript: false,
         enableDomStorage: false,
         universalLinksOnly: true,
+        newTask: false,
         headers: const <String, String>{},
       );
       expect(
@@ -170,6 +177,35 @@ void main() {
             'enableJavaScript': false,
             'enableDomStorage': false,
             'universalLinksOnly': true,
+            'newTask': false,
+            'headers': <String, String>{},
+          })
+        ],
+      );
+    });
+
+    test('launch into new task', () async {
+      await launcher.launch(
+        'http://example.com/',
+        useSafariVC: false,
+        useWebView: false,
+        enableJavaScript: false,
+        enableDomStorage: false,
+        universalLinksOnly: false,
+        newTask: true,
+        headers: const <String, String>{},
+      );
+      expect(
+        log,
+        <Matcher>[
+          isMethodCall('launch', arguments: <String, Object>{
+            'url': 'http://example.com/',
+            'useSafariVC': false,
+            'useWebView': false,
+            'enableJavaScript': false,
+            'enableDomStorage': false,
+            'universalLinksOnly': false,
+            'newTask': true,
             'headers': <String, String>{},
           })
         ],
@@ -184,6 +220,7 @@ void main() {
         enableJavaScript: false,
         enableDomStorage: false,
         universalLinksOnly: false,
+        newTask: false,
         headers: const <String, String>{},
       );
       expect(
@@ -196,6 +233,7 @@ void main() {
             'enableJavaScript': false,
             'enableDomStorage': false,
             'universalLinksOnly': false,
+            'newTask': false,
             'headers': <String, String>{},
           })
         ],
@@ -210,6 +248,7 @@ void main() {
         enableJavaScript: true,
         enableDomStorage: false,
         universalLinksOnly: false,
+        newTask: false,
         headers: const <String, String>{},
       );
       expect(
@@ -222,6 +261,7 @@ void main() {
             'enableJavaScript': true,
             'enableDomStorage': false,
             'universalLinksOnly': false,
+            'newTask': false,
             'headers': <String, String>{},
           })
         ],
@@ -236,6 +276,7 @@ void main() {
         enableJavaScript: false,
         enableDomStorage: true,
         universalLinksOnly: false,
+        newTask: false,
         headers: const <String, String>{},
       );
       expect(
@@ -248,6 +289,7 @@ void main() {
             'enableJavaScript': false,
             'enableDomStorage': true,
             'universalLinksOnly': false,
+            'newTask': false,
             'headers': <String, String>{},
           })
         ],
@@ -262,6 +304,7 @@ void main() {
         enableJavaScript: false,
         enableDomStorage: false,
         universalLinksOnly: false,
+        newTask: false,
         headers: const <String, String>{},
       );
       expect(
@@ -274,6 +317,7 @@ void main() {
             'enableJavaScript': false,
             'enableDomStorage': false,
             'universalLinksOnly': false,
+            'newTask': false,
             'headers': <String, String>{},
           })
         ],
@@ -288,6 +332,7 @@ void main() {
         enableJavaScript: false,
         enableDomStorage: false,
         universalLinksOnly: false,
+        newTask: false,
         headers: const <String, String>{},
       );
 

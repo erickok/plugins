@@ -42,6 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
         url,
         useSafariVC: false,
         useWebView: false,
+        newTask: false,
         enableJavaScript: false,
         enableDomStorage: false,
         universalLinksOnly: false,

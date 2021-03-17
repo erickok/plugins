@@ -1,3 +1,7 @@
+# 2.0.1
+
+- Compatibility with added `newTask` parameter in `platform_interface`.
+
 # 2.0.0
 
 - Migrate to null safety.

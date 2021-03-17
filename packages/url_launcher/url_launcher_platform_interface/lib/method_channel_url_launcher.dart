@@ -37,6 +37,7 @@ class MethodChannelUrlLauncher extends UrlLauncherPlatform {
     required bool enableJavaScript,
     required bool enableDomStorage,
     required bool universalLinksOnly,
+    required bool newTask,
     required Map<String, String> headers,
     String? webOnlyWindowName,
   }) {
@@ -49,6 +50,7 @@ class MethodChannelUrlLauncher extends UrlLauncherPlatform {
         'enableJavaScript': enableJavaScript,
         'enableDomStorage': enableDomStorage,
         'universalLinksOnly': universalLinksOnly,
+        'newTask': newTask,
         'headers': headers,
       },
     ).then((value) => value ?? false);

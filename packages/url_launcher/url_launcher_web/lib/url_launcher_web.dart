@@ -79,6 +79,7 @@ class UrlLauncherPlugin extends UrlLauncherPlatform {
     bool enableJavaScript = false,
     bool enableDomStorage = false,
     bool universalLinksOnly = false,
+    bool newTask = false,
     Map<String, String> headers = const <String, String>{},
     String? webOnlyWindowName,
   }) {

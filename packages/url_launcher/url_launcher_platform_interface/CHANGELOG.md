@@ -1,3 +1,7 @@
+## 2.0.3
+
+* Adds `newTask` parameter to launch a url into a new task context.
+
 ## 2.0.2
 
 * Update platform_plugin_interface version requirement.

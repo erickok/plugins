@@ -16,6 +16,7 @@ class MockUrlLauncher extends Fake
   bool? enableJavaScript;
   bool? enableDomStorage;
   bool? universalLinksOnly;
+  bool? newTask;
   Map<String, String>? headers;
   String? webOnlyWindowName;
 
@@ -36,6 +37,7 @@ class MockUrlLauncher extends Fake
     required bool enableJavaScript,
     required bool enableDomStorage,
     required bool universalLinksOnly,
+    required bool newTask,
     required Map<String, String> headers,
     required String? webOnlyWindowName,
   }) {
@@ -45,6 +47,7 @@ class MockUrlLauncher extends Fake
     this.enableJavaScript = enableJavaScript;
     this.enableDomStorage = enableDomStorage;
     this.universalLinksOnly = universalLinksOnly;
+    this.newTask = newTask;
     this.headers = headers;
     this.webOnlyWindowName = webOnlyWindowName;
   }
@@ -71,6 +74,7 @@ class MockUrlLauncher extends Fake
     required bool enableJavaScript,
     required bool enableDomStorage,
     required bool universalLinksOnly,
+    required bool newTask,
     required Map<String, String> headers,
     String? webOnlyWindowName,
   }) async {
@@ -80,6 +84,7 @@ class MockUrlLauncher extends Fake
     expect(enableJavaScript, this.enableJavaScript);
     expect(enableDomStorage, this.enableDomStorage);
     expect(universalLinksOnly, this.universalLinksOnly);
+    expect(newTask, this.newTask);
     expect(headers, this.headers);
     expect(webOnlyWindowName, this.webOnlyWindowName);
     launchCalled = true;

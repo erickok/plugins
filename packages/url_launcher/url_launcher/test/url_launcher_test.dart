@@ -53,6 +53,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: false,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )
@@ -69,6 +70,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: false,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{'key': 'value'},
           webOnlyWindowName: null,
         )
@@ -90,6 +92,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: false,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )
@@ -106,6 +109,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: false,
           universalLinksOnly: true,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )
@@ -114,6 +118,24 @@ void main() {
           await launch('http://flutter.dev/',
               forceSafariVC: false, universalLinksOnly: true),
           isTrue);
+    });
+
+    test('new task', () async {
+      mock
+        ..setLaunchExpectations(
+          url: 'http://flutter.dev/',
+          useSafariVC: true,
+          useWebView: false,
+          enableJavaScript: false,
+          enableDomStorage: false,
+          universalLinksOnly: false,
+          newTask: true,
+          headers: <String, String>{},
+          webOnlyWindowName: null,
+        )
+        ..setResponse(true);
+      expect(
+          await launch('http://flutter.dev/', newTask: true), isTrue);
     });
 
     test('force WebView', () async {
@@ -125,6 +147,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: false,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )
@@ -141,6 +164,7 @@ void main() {
           enableJavaScript: true,
           enableDomStorage: false,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )
@@ -160,6 +184,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: true,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )
@@ -179,6 +204,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: false,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )
@@ -200,6 +226,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: false,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )
@@ -233,6 +260,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: false,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )
@@ -262,6 +290,7 @@ void main() {
           enableJavaScript: false,
           enableDomStorage: false,
           universalLinksOnly: false,
+          newTask: false,
           headers: <String, String>{},
           webOnlyWindowName: null,
         )

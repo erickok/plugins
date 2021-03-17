@@ -45,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         enableJavaScript: false,
         enableDomStorage: false,
         universalLinksOnly: false,
+        newTask: false,
         headers: <String, String>{},
       );
     } else {
